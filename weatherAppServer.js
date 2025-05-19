@@ -18,14 +18,13 @@ app.use("/search", searchRoutes);
 app.use("/weather", weatherRoutes);
 app.use("/recent", recentRoutes);
 
-if (process.argv.length !== 3) {
-    process.stdout.write("Usage summerCampServer.js portNumber");
+if (process.argv.length !== 2) {
+    process.stdout.write("Usage summerCampServer.js");
     process.exit(1);
 }
 
-portNumber = process.argv[2];
-
-app.listen(portNumber, () => {
+const portNumber = process.env.PORT || 3000;
+app.listen(3000, () => {
 });
 
 process.stdin.setEncoding("utf8");
