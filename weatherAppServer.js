@@ -24,7 +24,7 @@ if (process.argv.length !== 2) {
 }
 
 const portNumber = process.env.PORT || 3000;
-app.listen(3000, () => {
+app.listen(portNumber, () => {
 });
 
 process.stdin.setEncoding("utf8");
