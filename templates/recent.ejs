@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<title>Recent Cities</title>
+<link rel="stylesheet" href="/styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Recent Cities</h1>
+        
+        <% if (cities.length===0) { %> 
+            No recently searched cities.<br> 
+        <% } else { %>
+            <div class="city-cards">
+                <% cities.forEach(city => { %>
+                    <div class="city-card">
+                        <h2><%= city.name %></h2>
+                        Temperature: <%= city.temp %> °F<br>
+                        Humidity: <%= city.humidity %>%<br>
+                        Condition: <%= city.condition %><br>
+                        Viewed on <%= city.date.toLocaleString() %><br>
+                    </div>
+                <% }) %>
+            </div>
+        <% } %>
+
+        <form action="/recent/clear" method="POST" onsubmit="return confirm('Are you sure you want to clear all recent cities?');">
+            <button type="submit">Clear Recent Cities</button>
+        </form>
+
+        <br>
+        <hr>
+        <a href="/">Home</a>
+    </div>
+</body>
+
+</html>

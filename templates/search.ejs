@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Weather App</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+
+        <% if (error) { %>
+            <p style="color: red;"><%= error %></p>
+        <% } %>
+
+        <form action="/weather/search" method="GET">    
+            <label>City: </label>
+            <input type="text" name="city" placeholder="Enter city name" required>
+            <br>
+            <button typ="submit">Search City</button>
+        </form>
+    
+        <hr>
+    
+        <a href="/">Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weather for <%= city %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Weather in <%= weather.location.name %></h1>
+        <% if (weather.current && weather.location) { %>
+            <div class="city-cards">
+                <div class="city-card">
+                    <h2><%= weather.location.name %></h2>
+                    Temperature: <%= weather.current.temp_f %> °F<br>
+                    Humidity: <%= weather.current.humidity %>%<br>
+                    Condition: <%= weather.current.condition.text %><br>
+                </div>
+            </div>
+        <% } else { %>
+            Sorry, no weather data found.<br>
+        <% } %>
+
+        <br>
+        <hr>
+    
+        <a href="/search">Search again</a> |
+        <a href="/">Home</a>
+    </div>
+    
+</body>
+</html>
