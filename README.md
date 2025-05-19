@@ -4,7 +4,7 @@ Group Members: Jordan Dia(jdia)
 
 App Description: Allow users to get the weather forecast of any city they search and store the results.
 
-YouTube Video Link: [youtube.com](youtube.com)
+YouTube Video Link: [https://youtube.com](youtube.com)
 
 APIs: Weather API [https://www.weatherapi.com/](https://www.weatherapi.com/)
 
